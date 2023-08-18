@@ -1,0 +1,23 @@
+{
+	"singleQuote": true,
+	"jsxSingleQuote": true,
+	"semi": false,
+	"tabWidth": 2,
+	"useTabs": true,
+	"bracketSpacing": true,
+	"jsxBracketSameLine": false,
+	"overrides": [
+		{
+			"files": "*.js",
+			"options": {
+				"parser": "babel"
+			}
+		},
+		{
+			"files": "*.jsx",
+			"options": {
+				"parser": "babel"
+			}
+		}
+	]
+}
