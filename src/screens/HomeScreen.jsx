@@ -6,14 +6,17 @@ import { TouchableOpacity } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 // Tamagui
 import { Text, XStack, ScrollView, View } from 'tamagui'
-import MovieScroll from '../components/MovieScroll'
+import MovieScroll from '../components/HomeComponets/MovieScroll'
+import MovieList from '../components/HomeComponets/MovieList'
 
 // Icons Tamagui
 
 const HomeScreen = () => {
 	const [trending, setTrending] = useState([1, 2, 3])
+	const [upComing, setUpComing] = useState([1, 2, 3])
+	const [topRated, setTopRated] = useState([1, 2, 3])
 	return (
-		<View flex={1} bg={'#0C1208'}>
+		<View flex={1} bg={'#151615'}>
 			<SafeAreaView>
 				<XStack ai={'center'} jc={'space-between'} px={'$4'} py={'$3'}>
 					<TouchableOpacity>
@@ -34,6 +37,12 @@ const HomeScreen = () => {
 				contentContainerStyle={{ paddingBottom: 10 }}
 			>
 				<MovieScroll data={trending} />
+
+				{/* Peliculas en camino */}
+				<MovieList title='Proximo' data={upComing} />
+
+				{/* Peliculas valorados */}
+				<MovieList title='Mejor Valorados' data={topRated} />
 			</ScrollView>
 		</View>
 	)
